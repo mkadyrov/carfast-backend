@@ -36,3 +36,10 @@ $router->get('/', function () use ($router) {
     );
    return $filter->brand;
 });
+
+$router->get('/init', function () use ($router) {
+    $path = resource_path() . "/json/cars.json";
+
+    $json = json_decode(file_get_contents($path), true);
+    return $json;
+});

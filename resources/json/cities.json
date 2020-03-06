@@ -1,0 +1,78 @@
+[
+    {
+        "name": "Алматы",
+        "short_name": "almaty"
+    },
+    {
+        "name": "Актобе",
+        "short_name": "aktobe"
+    },
+    {
+        "name": "Караганда",
+        "short_name": "karaganda"
+    },
+    {
+        "name": "Нур-Султан (Астана)",
+        "short_name": "nur-sultan"
+    },
+    {
+        "name": "Павлодар",
+        "short_name": "pavlodar"
+    },
+    {
+        "name": "Усть-Каменогорск",
+        "short_name": "ust-kamenogorsk"
+    },
+    {
+        "name": "Костанай",
+        "short_name": "kostanai"
+    },
+    {
+        "name": "Актау",
+        "short_name": "aktau"
+    },
+    {
+        "name": "Шымкент",
+        "short_name": "shymkent"
+    },
+    {
+        "name": "Атырау",
+        "short_name": "atyrau"
+    },
+    {
+        "name": "Жезказган",
+        "short_name": "jezkazgan"
+    },
+    {
+        "name": "Уральск",
+        "short_name": "uralsk"
+    },
+    {
+        "name": "Петропавловск",
+        "short_name": "petropavlovsk"
+    },
+    {
+        "name": "Талдыкорган",
+        "short_name": "taldykorgan"
+    },
+    {
+        "name": "Кызылорда",
+        "short_name": "kyzylorda"
+    },
+    {
+        "name": "Семей",
+        "short_name": "semei"
+    },
+    {
+        "name": "Тараз",
+        "short_name": "taraz"
+    },
+    {
+        "name": "Кокшетау",
+        "short_name": "kokshetau"
+    },
+    {
+        "name": "Туркестан",
+        "short_name": "turkestan"
+    }
+]

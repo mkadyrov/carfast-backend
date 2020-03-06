@@ -1,0 +1,648 @@
+[
+    {
+        "name": "Акмолинская область",
+        "cities": [
+            {
+                "name": "Нур-Султан (Астана)",
+                "short_name": "almaty"
+            },
+            {
+                "name": "Щучинск",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Атбасар",
+                "short_name": ""
+            },
+            {
+                "name": "Степногорск",
+                "short_name": ""
+            },
+            {
+                "name": "Есиль",
+                "short_name": ""
+            },
+            {
+                "name": "Макинск",
+                "short_name": ""
+            },
+            {
+                "name": "Акколь (Аккольский р-н)",
+                "short_name": ""
+            },
+            {
+                "name": "Ерейментау",
+                "short_name": ""
+            },
+            {
+                "name": "Державинск",
+                "short_name": ""
+            },
+            {
+                "name": "Шортанды",
+                "short_name": ""
+            },
+            {
+                "name": "Жаксы",
+                "short_name": ""
+            },
+            {
+                "name": "Зеренда",
+                "short_name": ""
+            },
+            {
+                "name": "Астраханка",
+                "short_name": ""
+            },
+            {
+                "name": "Боровое",
+                "short_name": ""
+            },
+            {
+                "name": "Балкашино",
+                "short_name": ""
+            },
+            {
+                "name": "Талапкер",
+                "short_name": ""
+            },
+            {
+                "name": "Аршалы",
+                "short_name": ""
+            },
+            {
+                "name": "Бестобе",
+                "short_name": ""
+            },
+            {
+                "name": "Джалтыр",
+                "short_name": ""
+            },
+            {
+                "name": "Егиндыколь",
+                "short_name": ""
+            },
+            {
+                "name": "Степняк",
+                "short_name": ""
+            },
+            {
+                "name": "Коргалжын",
+                "short_name": ""
+            },
+            {
+                "name": "Мамай",
+                "short_name": ""
+            },
+            {
+                "name": "Новомарковка",
+                "short_name": ""
+            },
+            {
+                "name": "Шантобе",
+                "short_name": ""
+            },
+            {
+                "name": "Кабанбай батыра (Целиноградский р-н)",
+                "short_name": ""
+            }
+        ]
+    },
+    {
+        "name": "Актюбинская область",
+        "cities": [
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            }
+        ]
+    },
+    {
+        "name": "Алматинская область",
+        "cities": [
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            }
+        ]
+    },
+    {
+        "name": "Атырауская область",
+        "cities": [
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            }
+        ]
+    },
+    {
+        "name": "Восточно-Казахстанская область",
+        "cities": [
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            }
+        ]
+    },
+    {
+        "name": "Жамбылская область",
+        "cities": [
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            }
+        ]
+    },
+    {
+        "name": "Западно-Казахстанская область",
+        "cities": [
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            }
+        ]
+    },
+    {
+        "name": "Карагандинская область",
+        "cities": [
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            }
+        ]
+    },
+    {
+        "name": "Костанайская область",
+        "cities": [
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            }
+        ]
+    },
+    {
+        "name": "Кызылординская область",
+        "cities": [
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            }
+        ]
+    },
+    {
+        "name": "Мангистауская область",
+        "cities": [
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            }
+        ]
+    },
+    {
+        "name": "Павлодарская область",
+        "cities": [
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            }
+        ]
+    },
+    {
+        "name": "Северо-Казахстанская область",
+        "cities": [
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            }
+        ]
+    },
+    {
+        "name": "Туркестанская область",
+        "cities": [
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            },
+            {
+                "name": "Кокшетау",
+                "short_name": ""
+            }
+        ]
+    }
+]
