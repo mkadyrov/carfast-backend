@@ -6,6 +6,7 @@ class Filter extends Model
 {
     protected $fillable = [
         'title',
+        'isActive', // New Key
         'brand',
         'model',
         'priceStart',
@@ -18,6 +19,7 @@ class Filter extends Model
         'percent',
         'gearbox',
         'condition',
-        'isCleared'
+        'isCleared',
+        'needsPremium',  // New Key
     ];
 }

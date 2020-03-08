@@ -2,8 +2,12 @@
     {
         "brand": "ARO",
         "model": [
-            "10 Series",
-            "24 Series"
+            {
+				"name":"10 Series"
+			},
+			{
+				"name":"24 Series"
+			}
         ]
     },
     {

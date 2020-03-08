@@ -4,11 +4,13 @@
         "cities": [
             {
                 "name": "Нур-Султан (Астана)",
-                "short_name": "almaty"
+                "short_name": "almaty",
+				"popular":true
             },
             {
                 "name": "Щучинск",
-                "short_name": ""
+                "short_name": "",
+				"popular":true
             },
             {
                 "name": "Кокшетау",
