@@ -17,7 +17,7 @@ use App\Stocks;
 use App\User;
 use Illuminate\Http\Request;
 
-$tokenBase = '123';
+define('tokenBase', '123');
 
 header("Access-Control-Allow-Origin: http://localhost:3000");
 header('Access-Control-Allow-Credentials: true');
@@ -26,29 +26,9 @@ header('Access-Control-Allow-Methods: POST, GET');
 
 $router->post('/api/filter/save', function (Request $request) use ($router) {
     $json = json_decode($request->getContent(), true);
-    if(!$json["_id"]){
-    $filter = Filter::create(
-        [
-            'title' => $json['brand'] . ' ' .$json['model'],
-            'isActive' => false,
-            'brand' => $json['brand'],
-            'model' => $json['model'],
-            'priceStart' => $json['priceStart'],
-            'priceEnd' => $json['priceEnd'],
-            'region' => $json['region'],
-            'city' =>$json['city'],
-            'city_name' =>$json['city_name'],
-            'yearStart' => $json['yearStart'],
-            'yearEnd' => $json['yearEnd'],
-            'gearbox' => $json['gearbox'],
-            'telegram_user_id' => $json['user'],
-            'condition' => $json['condition'],
-            'isCleared' => ['type' => $json['isCleared']],
-            'needsPremium' => false,
-        ]);
-    }
-    else{
-        $filter = Filter::find($json["_id"])->update(
+    if (tokenBase === $json["token"] && isset($json["user"])) {
+        if ($json["_id"] === 0) {
+        $filter = Filter::create(
             [
                 'title' => $json['brand'] . ' ' .$json['model'],
                 'isActive' => false,
@@ -67,17 +47,40 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
                 'isCleared' => ['type' => $json['isCleared']],
                 'needsPremium' => false,
             ]);
+        }
+        else{
+            $filter = Filter::find($json["_id"])->update(
+                [
+                    'title' => $json['brand'] . ' ' .$json['model'],
+                    'isActive' => false,
+                    'brand' => $json['brand'],
+                    'model' => $json['model'],
+                    'priceStart' => $json['priceStart'],
+                    'priceEnd' => $json['priceEnd'],
+                    'region' => $json['region'],
+                    'city' =>$json['city'],
+                    'city_name' =>$json['city_name'],
+                    'yearStart' => $json['yearStart'],
+                    'yearEnd' => $json['yearEnd'],
+                    'gearbox' => $json['gearbox'],
+                    'telegram_user_id' => $json['user'],
+                    'condition' => $json['condition'],
+                    'isCleared' => ['type' => $json['isCleared']],
+                    'needsPremium' => false,
+                ]);
 
+        }
     }
-
     return $json;
 });
 
 // Remove Filter (MongoDB)
 $router->post('/api/delete', function (Request $request) use ($router) {
     $json = json_decode($request->getContent(), true);
-    Filter::find($json['id'])->delete();
-    return 'asd';
+    if (tokenBase === $json["token"] && isset($json["user"])) {
+        Filter::find($json['id'])->delete();
+    }
+    return $json;
 });
 
 // Get Filters (MongoDB)
@@ -156,7 +159,7 @@ $router->get('/api/regions', function () use ($router) {
         foreach ($item['cities'] as $cityes) {
             $city = [];
             $city['name'] = $cityes['name'];
-            $city['city'] = $cityes['name'];
+            $city['city'] = isset($cityes['city']) ? $cityes['city'] : $cityes['name'];
             if (!array_key_exists('popular', $cityes)) {
                 $city['popular'] = false;
             } else {
