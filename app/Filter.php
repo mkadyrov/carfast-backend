@@ -17,6 +17,7 @@ class Filter extends Model
         'yearStart',
         'yearEnd',
         'percent',
+        'telegram_user_id',
         'gearbox',
         'condition',
         'isCleared',

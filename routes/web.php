@@ -26,6 +26,7 @@ header('Access-Control-Allow-Methods: POST, GET');
 
 $router->post('/api/filter/save', function (Request $request) use ($router) {
     $json = json_decode($request->getContent(), true);
+    if(!$json["_id"]){
     $filter = Filter::create(
         [
             'title' => $json['brand'] . ' ' .$json['model'],
@@ -40,11 +41,35 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
             'yearStart' => $json['yearStart'],
             'yearEnd' => $json['yearEnd'],
             'gearbox' => $json['gearbox'],
+            'telegram_user_id' => $json['user'],
             'condition' => $json['condition'],
             'isCleared' => ['type' => $json['isCleared']],
             'needsPremium' => false,
-        ]
-    );
+        ]);
+    }
+    else{
+        $filter = Filter::find($json["_id"])->update(
+            [
+                'title' => $json['brand'] . ' ' .$json['model'],
+                'isActive' => false,
+                'brand' => $json['brand'],
+                'model' => $json['model'],
+                'priceStart' => $json['priceStart'],
+                'priceEnd' => $json['priceEnd'],
+                'region' => $json['region'],
+                'city' =>$json['city'],
+                'city_name' =>$json['city_name'],
+                'yearStart' => $json['yearStart'],
+                'yearEnd' => $json['yearEnd'],
+                'gearbox' => $json['gearbox'],
+                'telegram_user_id' => $json['user'],
+                'condition' => $json['condition'],
+                'isCleared' => ['type' => $json['isCleared']],
+                'needsPremium' => false,
+            ]);
+
+    }
+
     return $json;
 });
 
@@ -56,8 +81,8 @@ $router->post('/api/delete', function (Request $request) use ($router) {
 });
 
 // Get Filters (MongoDB)
-$router->get('/api/filter', function () use ($router) {
-    $filters = Filter::all();
+$router->get('/api/filter', function (Request $request) use ($router) {
+    $filters = Filter::where("telegram_user_id",$request->get("telegram_user_id"))->get();
     return $filters;
 });
 
