@@ -27,6 +27,31 @@ header('Access-Control-Allow-Methods: POST, GET');
 $router->post('/api/filter/save', function (Request $request) use ($router) {
     $json = json_decode($request->getContent(), true);
     if (tokenBase === $json["token"] && isset($json["user"])) {
+        $tarif = 1;
+        $needsPremium = false;
+        if ($tarif == 0) {
+            $needsPremium = true;
+        }
+        if ($tarif === 1) {
+            $filters = Filter::all();
+            if (count($filters) > 3) {
+                $needsPremium = true;
+            }
+            if ($json['region'] === '' || $json['brand'] === '' || $json['model'] === '') {
+                $needsPremium = true;
+            }
+            if ($json['condition'] !== '' || $json['gearbox'] !== '' || $json['isCleared'] !== null) {
+                $needsPremium = true;
+            }
+            if ($json['region'] === '' && $json['brand'] === '' && $json['model'] === null) {
+                $needsPremium = true;
+            }
+        }
+        if ($tarif === 2) {
+            if ($json['condition'] !== '' || $json['gearbox'] !== '' || $json['isCleared'] !== null) {
+                $needsPremium = true;
+            }
+        }
         if ($json["_id"] === 0) {
         $filter = Filter::create(
             [
@@ -45,7 +70,7 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
                 'telegram_user_id' => $json['user'],
                 'condition' => $json['condition'],
                 'isCleared' => ['type' => $json['isCleared']],
-                'needsPremium' => false,
+                'needsPremium' => $needsPremium,
             ]);
         }
         else{
@@ -66,7 +91,7 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
                     'telegram_user_id' => $json['user'],
                     'condition' => $json['condition'],
                     'isCleared' => ['type' => $json['isCleared']],
-                    'needsPremium' => false,
+                    'needsPremium' => $needsPremium,
                 ]);
 
         }
@@ -85,7 +110,7 @@ $router->post('/api/delete', function (Request $request) use ($router) {
 
 // Get Filters (MongoDB)
 $router->get('/api/filter', function (Request $request) use ($router) {
-    $filters = Filter::where("telegram_user_id",$request->get("telegram_user_id"))->get();
+    $filters = Filter::where("telegram_user_id",$request->get("telegram_user_id"))->orderBy('created_at', 'desc')->get();
     return $filters;
 });
 
