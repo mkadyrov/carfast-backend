@@ -27,31 +27,6 @@ header('Access-Control-Allow-Methods: POST, GET');
 $router->post('/api/filter/save', function (Request $request) use ($router) {
     $json = json_decode($request->getContent(), true);
     if (tokenBase === $json["token"] && isset($json["user"])) {
-        $tarif = 1;
-        $needsPremium = false;
-        if ($tarif == 0) {
-            $needsPremium = true;
-        }
-        if ($tarif === 1) {
-            $filters = Filter::all();
-            if (count($filters) > 3) {
-                $needsPremium = true;
-            }
-            if ($json['region'] === '' || $json['brand'] === '' || $json['model'] === '') {
-                $needsPremium = true;
-            }
-            if ($json['condition'] !== '' || $json['gearbox'] !== '' || $json['isCleared'] !== null) {
-                $needsPremium = true;
-            }
-            if ($json['region'] === '' && $json['brand'] === '' && $json['model'] === null) {
-                $needsPremium = true;
-            }
-        }
-        if ($tarif === 2) {
-            if ($json['condition'] !== '' || $json['gearbox'] !== '' || $json['isCleared'] !== null) {
-                $needsPremium = true;
-            }
-        }
         if ($json["_id"] === 0) {
         $filter = Filter::create(
             [
@@ -70,11 +45,11 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
                 'telegram_user_id' => $json['user'],
                 'condition' => $json['condition'],
                 'isCleared' => ['type' => $json['isCleared']],
-                'needsPremium' => $needsPremium,
+                'needsPremium' => true,
             ]);
         }
         else{
-            $filter = Filter::find($json["_id"])->update(
+            $filter = Filter::findOrFail($json["_id"])->update(
                 [
                     'title' => $json['brand'] . ' ' .$json['model'],
                     'isActive' => false,
@@ -91,12 +66,19 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
                     'telegram_user_id' => $json['user'],
                     'condition' => $json['condition'],
                     'isCleared' => ['type' => $json['isCleared']],
-                    'needsPremium' => $needsPremium,
+                    'needsPremium' => true,
                 ]);
+            $filter = Filter::findOrFail($json["_id"]);
 
         }
+        if(!empty($filter->_id)){
+            $client = new GuzzleHttp\Client();
+            $res = $client->post('https://postb.in/1584073154363-2494886927306/'.$filter->id , [
+                'json' =>$filter
+            ]);
+        }
     }
-    return $json;
+    return $filter;
 });
 
 // Remove Filter (MongoDB)
@@ -111,6 +93,39 @@ $router->post('/api/delete', function (Request $request) use ($router) {
 // Get Filters (MongoDB)
 $router->get('/api/filter', function (Request $request) use ($router) {
     $filters = Filter::where("telegram_user_id",$request->get("telegram_user_id"))->orderBy('created_at', 'desc')->get();
+    $counter = 0;
+    $tarif = 3;
+    $needsPremium = false;
+    foreach ($filters as $filter) {
+        if ($tarif == 0) {
+            $needsPremium = true;
+        }
+        if ($tarif === 1) {
+            if ($counter > 2) {
+                $needsPremium = true;
+            }
+            if ($filter->region === '' || $filter->brand === '' || $filter->model === '') {
+                $needsPremium = true;
+            }
+            if ($filter->condition !== '' || $filter->gearbox !== '' || $filter->isCleared !== null) {
+                $needsPremium = true;
+            }
+            if ($filter->region === '' && $filter->brand === '' && $filter->model === null) {
+                $needsPremium = true;
+            }
+        }
+        if ($tarif === 2) {
+            if ($filter->condition !== '' || $filter->gearbox !== '' || $filter->isCleared !== null) {
+                $needsPremium = true;
+            }
+        }
+        if(!$needsPremium){
+            $filter->isActive = true;
+        }
+        $filter->needsPremium = $needsPremium;
+        $filter->save();
+        $counter++;
+    }
     return $filters;
 });
 
