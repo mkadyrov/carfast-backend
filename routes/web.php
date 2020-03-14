@@ -49,7 +49,7 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
             ]);
         }
         else{
-            $filter = Filter::create($json["_id"])->update(
+            Filter::find($json["_id"])->update(
                 [
                     'title' => $json['brand'] . ' ' .$json['model'],
                     'isActive' => false,
@@ -73,7 +73,7 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
         }
         if(!empty($filter->_id)){
             $client = new GuzzleHttp\Client();
-            $res = $client->post('https://postb.in/b/1584167025500-6092891672160/'.$filter->id , [
+            $res = $client->post('https://postb.in/b/1584167025500-6092891672160' , [
                 'json' =>$filter
             ]);
         }
