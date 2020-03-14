@@ -19,7 +19,7 @@ use Illuminate\Http\Request;
 
 define('tokenBase', '123');
 
-header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Origin: https://app.fastbot.pro");
 header('Access-Control-Allow-Credentials: true');
 header('Access-Control-Allow-Headers: Content-Type');
 header('Access-Control-Allow-Methods: POST, GET');
