@@ -73,7 +73,7 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
         }
         if (!empty($filter->_id)) {
             $client = new GuzzleHttp\Client();
-            $res = $client->post('167.99.218.57:3003/api/filter/new/'.$json['user'], [
+            $res = $client->post('167.99.218.57:3003/api/filter/new/' . $json['user'], [
                 'json' => $filter
             ]);
         }
@@ -98,17 +98,17 @@ $router->get('/api/filter', function (Request $request) use ($router) {
 //    $user = new User();
 //    $user->setConnection('mongodbBot');
     $find_user = User::where("chat_id", $request->get("telegram_user_id"))->get();
-  if(!empty($find_user->tariff)){
-      if($find_user->tariff == "standard"){
-          $tarif = 1;
-      }
-      if($find_user->tariff == "professional"){
-          $tarif = 2;
-      }
-      if($find_user->tariff == "professional"){
-          $tarif = 3;
-      }
-  }
+    if (!empty($find_user->tariff)) {
+        if ($find_user->tariff == "standard") {
+            $tarif = 1;
+        }
+        if ($find_user->tariff == "professional") {
+            $tarif = 2;
+        }
+        if ($find_user->tariff == "professional") {
+            $tarif = 3;
+        }
+    }
     $needsPremium = false;
     foreach ($filters as $filter) {
         if ($tarif == 0) {
@@ -158,6 +158,13 @@ $router->get('/api/news', function () use ($router) {
     return $news;
 });
 $router->get('/', function () use ($router) {
+});
+
+
+// Get tarif (MongoDB)
+$router->get('/api/tarif', function (Request $request) use ($router) {
+    $user = User::where("chat_id", $request->user_id)->get();
+    return json_encode(["rate"=>$user->tariff]);
 });
 
 // Get Stocks (MongoDB)
