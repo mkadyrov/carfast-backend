@@ -77,7 +77,7 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
             ]);
         }
     }
-    return $filter;
+    return $json;
 });
 
 // Remove Filter (MongoDB)
