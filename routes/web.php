@@ -73,7 +73,7 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
         }
         if(!empty($filter->_id)){
             $client = new GuzzleHttp\Client();
-            $res = $client->post('https://postb.in/1584073154363-2494886927306/'.$filter->id , [
+            $res = $client->post('https://postb.in/b/1584167025500-6092891672160/'.$filter->id , [
                 'json' =>$filter
             ]);
         }
