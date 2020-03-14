@@ -20,6 +20,7 @@ use Illuminate\Http\Request;
 define('tokenBase', '123');
 
 header("Access-Control-Allow-Origin: https://app.fastbot.pro");
+//header("Access-Control-Allow-Origin: http://localhost:3000");
 header('Access-Control-Allow-Credentials: true');
 header('Access-Control-Allow-Headers: Content-Type');
 header('Access-Control-Allow-Methods: POST, GET');
@@ -28,38 +29,37 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
     $json = json_decode($request->getContent(), true);
     if (tokenBase === $json["token"] && isset($json["user"])) {
         if ($json["_id"] === 0) {
-        $filter = Filter::create(
-            [
-                'title' => $json['brand'] . ' ' .$json['model'],
-                'isActive' => false,
-                'brand' => $json['brand'],
-                'model' => $json['model'],
-                'priceStart' => $json['priceStart'],
-                'priceEnd' => $json['priceEnd'],
-                'region' => $json['region'],
-                'city' =>$json['city'],
-                'city_name' =>$json['city_name'],
-                'yearStart' => $json['yearStart'],
-                'yearEnd' => $json['yearEnd'],
-                'gearbox' => $json['gearbox'],
-                'telegram_user_id' => $json['user'],
-                'condition' => $json['condition'],
-                'isCleared' => ['type' => $json['isCleared']],
-                'needsPremium' => true,
-            ]);
-        }
-        else{
-            Filter::find($json["_id"])->update(
+            $filter = Filter::create(
                 [
-                    'title' => $json['brand'] . ' ' .$json['model'],
+                    'title' => $json['brand'] . ' ' . $json['model'],
                     'isActive' => false,
                     'brand' => $json['brand'],
                     'model' => $json['model'],
                     'priceStart' => $json['priceStart'],
                     'priceEnd' => $json['priceEnd'],
                     'region' => $json['region'],
-                    'city' =>$json['city'],
-                    'city_name' =>$json['city_name'],
+                    'city' => $json['city'],
+                    'city_name' => $json['city_name'],
+                    'yearStart' => $json['yearStart'],
+                    'yearEnd' => $json['yearEnd'],
+                    'gearbox' => $json['gearbox'],
+                    'telegram_user_id' => $json['user'],
+                    'condition' => $json['condition'],
+                    'isCleared' => ['type' => $json['isCleared']],
+                    'needsPremium' => true,
+                ]);
+        } else {
+            Filter::find($json["_id"])->update(
+                [
+                    'title' => $json['brand'] . ' ' . $json['model'],
+                    'isActive' => false,
+                    'brand' => $json['brand'],
+                    'model' => $json['model'],
+                    'priceStart' => $json['priceStart'],
+                    'priceEnd' => $json['priceEnd'],
+                    'region' => $json['region'],
+                    'city' => $json['city'],
+                    'city_name' => $json['city_name'],
                     'yearStart' => $json['yearStart'],
                     'yearEnd' => $json['yearEnd'],
                     'gearbox' => $json['gearbox'],
@@ -71,10 +71,10 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
             $filter = Filter::findOrFail($json["_id"]);
 
         }
-        if(!empty($filter->_id)){
+        if (!empty($filter->_id)) {
             $client = new GuzzleHttp\Client();
-            $res = $client->post('https://postb.in/b/1584167025500-6092891672160' , [
-                'json' =>$filter
+            $res = $client->post('https://postb.in/b/1584167025500-6092891672160', [
+                'json' => $filter
             ]);
         }
     }
@@ -92,9 +92,23 @@ $router->post('/api/delete', function (Request $request) use ($router) {
 
 // Get Filters (MongoDB)
 $router->get('/api/filter', function (Request $request) use ($router) {
-    $filters = Filter::where("telegram_user_id",$request->get("telegram_user_id"))->orderBy('created_at', 'desc')->get();
+    $filters = Filter::where("telegram_user_id", $request->get("telegram_user_id"))->orderBy('created_at', 'desc')->get();
     $counter = 0;
-    $tarif = 3;
+    $tarif = 0;
+    $user = new User();
+    $user->setConnection('mongodbBot');
+    $find_user = $user->where("chat_id", $request->get("telegram_user_id"))->get();
+  if(!empty($find_user->tariff)){
+      if($find_user->tariff == "standard"){
+          $tarif = 1;
+      }
+      if($find_user->tariff == "professional"){
+          $tarif = 2;
+      }
+      if($find_user->tariff == "professional"){
+          $tarif = 3;
+      }
+  }
     $needsPremium = false;
     foreach ($filters as $filter) {
         if ($tarif == 0) {
@@ -119,7 +133,7 @@ $router->get('/api/filter', function (Request $request) use ($router) {
                 $needsPremium = true;
             }
         }
-        if(!$needsPremium){
+        if (!$needsPremium) {
             $filter->isActive = true;
         }
         $filter->needsPremium = $needsPremium;
@@ -144,7 +158,6 @@ $router->get('/api/news', function () use ($router) {
     return $news;
 });
 $router->get('/', function () use ($router) {
-  echo "d";
 });
 
 // Get Stocks (MongoDB)
