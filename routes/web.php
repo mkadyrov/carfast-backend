@@ -32,7 +32,7 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
             $filter = Filter::create(
                 [
                     'title' => $json['brand'] . ' ' . $json['model'],
-                    'isActive' => false,
+                    'isActive' => true,
                     'brand' => $json['brand'],
                     'model' => $json['model'],
                     'priceStart' => $json['priceStart'],
@@ -52,7 +52,7 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
             Filter::find($json["_id"])->update(
                 [
                     'title' => $json['brand'] . ' ' . $json['model'],
-                    'isActive' => false,
+                    'isActive' => true,
                     'brand' => $json['brand'],
                     'model' => $json['model'],
                     'priceStart' => $json['priceStart'],
