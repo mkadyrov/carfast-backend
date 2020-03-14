@@ -95,9 +95,9 @@ $router->get('/api/filter', function (Request $request) use ($router) {
     $filters = Filter::where("telegram_user_id", $request->get("telegram_user_id"))->orderBy('created_at', 'desc')->get();
     $counter = 0;
     $tarif = 0;
-    $user = new User();
-    $user->setConnection('mongodbBot');
-    $find_user = $user->where("chat_id", $request->get("telegram_user_id"))->get();
+//    $user = new User();
+//    $user->setConnection('mongodbBot');
+    $find_user = User::where("chat_id", $request->get("telegram_user_id"))->get();
   if(!empty($find_user->tariff)){
       if($find_user->tariff == "standard"){
           $tarif = 1;
