@@ -49,7 +49,7 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
             ]);
         }
         else{
-            $filter = Filter::findOrFail($json["_id"])->update(
+            $filter = Filter::create($json["_id"])->update(
                 [
                     'title' => $json['brand'] . ' ' .$json['model'],
                     'isActive' => false,
