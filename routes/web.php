@@ -12,7 +12,6 @@
 */
 
 use App\Filter;
-use App\News;
 use App\Stocks;
 use App\User;
 use Illuminate\Http\Request;
@@ -143,7 +142,6 @@ $router->get('/api/news', function () use ($router) {
     $news = News::take(3)->get();
     return $news;
 });
-// Get News (MongoDB)
 $router->get('/', function () use ($router) {
   echo "d";
 });
