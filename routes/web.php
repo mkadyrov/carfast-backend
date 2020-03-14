@@ -14,7 +14,7 @@
 use App\Filter;
 use App\News;
 use App\Stocks;
-use App\User;
+use Jenssegers\Mongodb\Auth\User;
 use Illuminate\Http\Request;
 
 define('tokenBase', '123');
