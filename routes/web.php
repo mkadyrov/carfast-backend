@@ -145,12 +145,7 @@ $router->get('/api/news', function () use ($router) {
 });
  Get News (MongoDB)
 $router->get('/', function () use ($router) {
-    try {
-        $news = News::take(3)->get();
-        echo "ddd";
-    } catch (\Exception $e) {
-        echo "d222";
-    }
+  echo "d";
 });
 
 // Get Stocks (MongoDB)
