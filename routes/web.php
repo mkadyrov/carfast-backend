@@ -17,7 +17,7 @@ use App\Stocks;
 use App\User;
 use Illuminate\Http\Request;
 
-define('tokenBase', '123');
+define('tokenBase', '3dff4ca43f3af248c2222efd7d5c7696');
 
 header("Access-Control-Allow-Origin: https://app.fastbot.pro");
 //header("Access-Control-Allow-Origin: http://localhost:3000");
@@ -153,8 +153,14 @@ $router->get('/api/user/{token}', function ($token = null) use ($router) {
 });
 
 // Get News (MongoDB)
-$router->get('/api/news', function () use ($router) {
-    $news = News::take(3)->get();
+$router->get('/api/news', function (Request $request) use ($router) {
+    if($request->id){
+        $news = News::find($request->id);
+    }
+    else{
+        $news = News::take(3)->get();
+    }
+
     return $news;
 });
 $router->get('/', function () use ($router) {
