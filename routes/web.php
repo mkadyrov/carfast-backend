@@ -143,7 +143,7 @@ $router->get('/api/news', function () use ($router) {
     $news = News::take(3)->get();
     return $news;
 });
- Get News (MongoDB)
+// Get News (MongoDB)
 $router->get('/', function () use ($router) {
   echo "d";
 });
