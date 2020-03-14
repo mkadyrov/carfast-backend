@@ -136,6 +136,9 @@ $router->get('/api/filter', function (Request $request) use ($router) {
         if (!$needsPremium) {
             $filter->isActive = true;
         }
+        else{
+            $filter->isActive = false;
+        }
         $filter->needsPremium = $needsPremium;
         $filter->save();
         $counter++;
