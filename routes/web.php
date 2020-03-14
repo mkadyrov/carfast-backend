@@ -12,6 +12,7 @@
 */
 
 use App\Filter;
+use App\News;
 use App\Stocks;
 use App\User;
 use Illuminate\Http\Request;
