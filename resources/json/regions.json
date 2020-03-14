@@ -1,650 +1,761 @@
 [
-    {
-        "name": "Акмолинская область",
-        "cities": [
-            {
-                "name": "Нур-Султан (Астана)",
-                "short_name": "almaty",
-				"popular":true
-            },
-            {
-                "name": "Щучинск",
-                "short_name": "",
-				"popular":true
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Атбасар",
-                "short_name": ""
-            },
-            {
-                "name": "Степногорск",
-                "short_name": ""
-            },
-            {
-                "name": "Есиль",
-                "short_name": ""
-            },
-            {
-                "name": "Макинск",
-                "short_name": ""
-            },
-            {
-                "name": "Акколь (Аккольский р-н)",
-                "short_name": ""
-            },
-            {
-                "name": "Ерейментау",
-                "short_name": ""
-            },
-            {
-                "name": "Державинск",
-                "short_name": ""
-            },
-            {
-                "name": "Шортанды",
-                "short_name": ""
-            },
-            {
-                "name": "Жаксы",
-                "short_name": ""
-            },
-            {
-                "name": "Зеренда",
-                "short_name": ""
-            },
-            {
-                "name": "Астраханка",
-                "short_name": ""
-            },
-            {
-                "name": "Боровое",
-                "short_name": ""
-            },
-            {
-                "name": "Балкашино",
-                "short_name": ""
-            },
-            {
-                "name": "Талапкер",
-                "short_name": ""
-            },
-            {
-                "name": "Аршалы",
-                "short_name": ""
-            },
-            {
-                "name": "Бестобе",
-                "short_name": ""
-            },
-            {
-                "name": "Джалтыр",
-                "short_name": ""
-            },
-            {
-                "name": "Егиндыколь",
-                "short_name": ""
-            },
-            {
-                "name": "Степняк",
-                "short_name": ""
-            },
-            {
-                "name": "Коргалжын",
-                "short_name": ""
-            },
-            {
-                "name": "Мамай",
-                "short_name": ""
-            },
-            {
-                "name": "Новомарковка",
-                "short_name": ""
-            },
-            {
-                "name": "Шантобе",
-                "short_name": ""
-            },
-            {
-                "name": "Кабанбай батыра (Целиноградский р-н)",
-                "short_name": ""
-            }
-        ]
-    },
-    {
-        "name": "Актюбинская область",
-        "cities": [
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            }
-        ]
-    },
-    {
-        "name": "Алматинская область",
-        "cities": [
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            }
-        ]
-    },
-    {
-        "name": "Атырауская область",
-        "cities": [
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            }
-        ]
-    },
-    {
-        "name": "Восточно-Казахстанская область",
-        "cities": [
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            }
-        ]
-    },
-    {
-        "name": "Жамбылская область",
-        "cities": [
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            }
-        ]
-    },
-    {
-        "name": "Западно-Казахстанская область",
-        "cities": [
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            }
-        ]
-    },
-    {
-        "name": "Карагандинская область",
-        "cities": [
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            }
-        ]
-    },
-    {
-        "name": "Костанайская область",
-        "cities": [
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            }
-        ]
-    },
-    {
-        "name": "Кызылординская область",
-        "cities": [
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            }
-        ]
-    },
-    {
-        "name": "Мангистауская область",
-        "cities": [
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            }
-        ]
-    },
-    {
-        "name": "Павлодарская область",
-        "cities": [
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            }
-        ]
-    },
-    {
-        "name": "Северо-Казахстанская область",
-        "cities": [
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            }
-        ]
-    },
-    {
-        "name": "Туркестанская область",
-        "cities": [
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            },
-            {
-                "name": "Кокшетау",
-                "short_name": ""
-            }
-        ]
-    }
+  {
+    "name": "Акмолинская область",
+    "cities": [
+      {
+        "short_name": "akkol_akkolskii_r-n",
+        "name": "Акколь (Аккольский р-н)"
+      },
+      {
+        "short_name": "arshaly",
+        "name": "Аршалы"
+      },
+      {
+        "short_name": "astraxanka",
+        "name": "Астраханка"
+      },
+      {
+        "short_name": "atbasar",
+        "name": "Атбасар"
+      },
+      {
+        "short_name": "balkashino",
+        "name": "Балкашино"
+      },
+      {
+        "short_name": "bestobe",
+        "name": "Бестобе"
+      },
+      {
+        "short_name": "borovoe",
+        "name": "Боровое"
+      },
+      {
+        "short_name": "derjavinsk",
+        "name": "Державинск"
+      },
+      {
+        "short_name": "dzhaltyr",
+        "name": "Джалтыр"
+      },
+      {
+        "short_name": "egindykol",
+        "name": "Егиндыколь"
+      },
+      {
+        "short_name": "ereimentau",
+        "name": "Ерейментау"
+      },
+      {
+        "short_name": "esil",
+        "name": "Есиль"
+      },
+      {
+        "short_name": "jaksy",
+        "name": "Жаксы"
+      },
+      {
+        "short_name": "zerenda",
+        "name": "Зеренда"
+      },
+      {
+        "short_name": "kabanbai_batyra_celinogradskii_r-n",
+        "name": "Кабанбай батыра (Целиноградский р-н)"
+      },
+      {
+        "short_name": "kokshetau",
+        "name": "Кокшетау"
+      },
+      {
+        "short_name": "korgaljyn",
+        "name": "Коргалжын"
+      },
+      {
+        "short_name": "makinsk",
+        "name": "Макинск"
+      },
+      {
+        "short_name": "mamai",
+        "name": "Мамай"
+      },
+      {
+        "short_name": "novomarkovka",
+        "name": "Новомарковка"
+      },
+      {
+        "short_name": "nur-sultan",
+        "name": "Нур-Султан (Астана)"
+      },
+      {
+        "short_name": "stepnogorsk",
+        "name": "Степногорск"
+      },
+      {
+        "short_name": "stepnyak",
+        "name": "Степняк"
+      },
+      {
+        "short_name": "talapker",
+        "name": "Талапкер"
+      },
+      {
+        "short_name": "shantobe",
+        "name": "Шантобе"
+      },
+      {
+        "short_name": "shortandy",
+        "name": "Шортанды"
+      },
+      {
+        "short_name": "shuchinsk",
+        "name": "Щучинск"
+      }
+    ]
+  },
+  {
+    "name": "Актюбинская область",
+    "cities": [
+      {
+        "short_name": "akrab",
+        "name": "Акраб"
+      },
+      {
+        "short_name": "aktobe",
+        "name": "Актобе"
+      },
+      {
+        "short_name": "alga",
+        "name": "Алга"
+      },
+      {
+        "short_name": "badamsha",
+        "name": "Бадамша"
+      },
+      {
+        "short_name": "baiganin",
+        "name": "Байганин"
+      },
+      {
+        "short_name": "irgiz",
+        "name": "Иргиз"
+      },
+      {
+        "short_name": "kandyagash",
+        "name": "Кандыагаш"
+      },
+      {
+        "short_name": "kenkijak",
+        "name": "Кенкияк"
+      },
+      {
+        "short_name": "komsomolskoe",
+        "name": "Комсомольское"
+      },
+      {
+        "short_name": "martuk",
+        "name": "Мартук"
+      },
+      {
+        "short_name": "temir",
+        "name": "Темир"
+      },
+      {
+        "short_name": "uil",
+        "name": "Уил"
+      },
+      {
+        "short_name": "xobda",
+        "name": "Хобда"
+      },
+      {
+        "short_name": "xromtau",
+        "name": "Хромтау"
+      },
+      {
+        "short_name": "shalkar",
+        "name": "Шалкар"
+      },
+      {
+        "short_name": "shubarkuduk",
+        "name": "Шубаркудук"
+      },
+      {
+        "short_name": "emba",
+        "name": "Эмба"
+      }
+    ]
+  },
+  {
+    "name": "Алматинская область",
+    "cities": [
+      {
+        "short_name": "almaty",
+        "name": "Алматы"
+      },
+      {
+        "short_name": "ashhibulak",
+        "name": "Ащибулак"
+      },
+      {
+        "short_name": "bayserke",
+        "name": "Байсерке"
+      },
+      {
+        "short_name": "bajterek",
+        "name": "Байтерек"
+      },
+      {
+        "short_name": "bakanas",
+        "name": "Баканас"
+      },
+      {
+        "short_name": "balpyk_bi",
+        "name": "Балпык би"
+      },
+      {
+        "short_name": "besagash",
+        "name": "Бесагаш"
+      },
+      {
+        "short_name": "boroldaj",
+        "name": "Боралдай"
+      },
+      {
+        "short_name": "esik",
+        "name": "Есик"
+      },
+      {
+        "short_name": "zhalkamys",
+        "name": "Жалкамыс"
+      },
+      {
+        "short_name": "jansugurov",
+        "name": "Жансугуров"
+      },
+      {
+        "short_name": "jarkent",
+        "name": "Жаркент"
+      },
+      {
+        "short_name": "zhetigen",
+        "name": "Жетиген"
+      },
+      {
+        "short_name": "irgeli",
+        "name": "Иргели"
+      },
+      {
+        "short_name": "kabanbai_alakolskii_r-n",
+        "name": "Кабанбай (Алакольский р-н)"
+      },
+      {
+        "short_name": "kapal",
+        "name": "Капал"
+      },
+      {
+        "short_name": "kapchagai",
+        "name": "Капшагай"
+      },
+      {
+        "short_name": "karabulak_eskeldinskii_r-n",
+        "name": "Карабулак (Ескельдинский р-н)"
+      },
+      {
+        "short_name": "kaskelen",
+        "name": "Каскелен"
+      },
+      {
+        "short_name": "kegen",
+        "name": "Кеген"
+      },
+      {
+        "short_name": "kendala",
+        "name": "Кендала"
+      },
+      {
+        "short_name": "kogaly",
+        "name": "Когалы"
+      },
+      {
+        "short_name": "kyzyltu",
+        "name": "Кызылту"
+      },
+      {
+        "short_name": "kirgauildy",
+        "name": "Кыргауылды"
+      },
+      {
+        "short_name": "lepsy",
+        "name": "Лепсы"
+      },
+      {
+        "short_name": "narynkol",
+        "name": "Нарынкол"
+      },
+      {
+        "short_name": "otegen_batyra",
+        "name": "Отеген-Батыр"
+      },
+      {
+        "short_name": "sarkand",
+        "name": "Сарканд"
+      },
+      {
+        "short_name": "saryozek",
+        "name": "Сарыозек"
+      },
+      {
+        "short_name": "talap",
+        "name": "Талап"
+      },
+      {
+        "short_name": "talgar",
+        "name": "Талгар"
+      },
+      {
+        "short_name": "taldykorgan",
+        "name": "Талдыкорган"
+      },
+      {
+        "short_name": "tekeli",
+        "name": "Текели"
+      },
+      {
+        "short_name": "uzynagash",
+        "name": "Узынагаш"
+      },
+      {
+        "short_name": "usharal",
+        "name": "Ушарал"
+      },
+      {
+        "short_name": "ushtobe",
+        "name": "Уштобе"
+      },
+      {
+        "short_name": "khorgos",
+        "name": "Хоргос"
+      },
+      {
+        "short_name": "chundja",
+        "name": "Чунджа"
+      },
+      {
+        "short_name": "shamalgan",
+        "name": "Шамалган"
+      },
+      {
+        "short_name": "shelek",
+        "name": "Шелек"
+      }
+    ]
+  },
+  {
+    "name": "Атырауская область",
+    "cities": [
+      {
+        "short_name": "akkystau",
+        "name": "Аккыстау"
+      },
+      {
+        "short_name": "atyrau",
+        "name": "Атырау"
+      },
+      {
+        "short_name": "ganushkino",
+        "name": "Ганюшкино"
+      },
+      {
+        "short_name": "dossor",
+        "name": "Доссор"
+      },
+      {
+        "short_name": "inderborskii",
+        "name": "Индерборский"
+      },
+      {
+        "short_name": "isataj",
+        "name": "Исатай"
+      },
+      {
+        "short_name": "kulsary",
+        "name": "Кульсары"
+      },
+      {
+        "short_name": "makat",
+        "name": "Макат"
+      },
+      {
+        "short_name": "maxambet",
+        "name": "Махамбет"
+      },
+      {
+        "short_name": "miyaly",
+        "name": "Миялы"
+      }
+    ]
+  },
+  {
+    "name": "Восточно-Казахстанская область",
+    "cities": [
+      {
+        "short_name": "akjar",
+        "name": "Акжар"
+      },
+      {
+        "short_name": "aksuat",
+        "name": "Аксуат"
+      },
+      {
+        "short_name": "altay",
+        "name": "Алтай"
+      },
+      {
+        "short_name": "ayagoz",
+        "name": "Аягоз"
+      },
+      {
+        "short_name": "barshatas",
+        "name": "Баршатас"
+      },
+      {
+        "short_name": "bolshaya_vladimirovka",
+        "name": "Большая Владимировка"
+      },
+      {
+        "short_name": "bolshenarymskoe",
+        "name": "Большенарымское"
+      },
+      {
+        "short_name": "borodulixa",
+        "name": "Бородулиха"
+      },
+      {
+        "short_name": "verhneberezovskij",
+        "name": "Верхнеберезовский"
+      },
+      {
+        "short_name": "georgievka",
+        "name": "Георгиевка"
+      },
+      {
+        "short_name": "glubokoe",
+        "name": "Глубокое"
+      },
+      {
+        "short_name": "zhezkent",
+        "name": "Жезкент"
+      },
+      {
+        "short_name": "zaisan",
+        "name": "Зайсан"
+      },
+      {
+        "short_name": "kainar",
+        "name": "Кайнар"
+      },
+      {
+        "short_name": "kalbatau",
+        "name": "Калбатау"
+      },
+      {
+        "short_name": "karaul",
+        "name": "Караул"
+      },
+      {
+        "short_name": "katon-karagai",
+        "name": "Катон-Карагай"
+      },
+      {
+        "short_name": "kokpekty",
+        "name": "Кокпекты"
+      },
+      {
+        "short_name": "kurchatov",
+        "name": "Курчатов"
+      },
+      {
+        "short_name": "kurchum",
+        "name": "Курчум"
+      },
+      {
+        "short_name": "makanchi",
+        "name": "Маканчи"
+      },
+      {
+        "short_name": "molodejnyi_ulanskii_r-n",
+        "name": "Молодежный (Уланский р-н)"
+      },
+      {
+        "short_name": "novaya_shulba",
+        "name": "Новая Шульба"
+      },
+      {
+        "short_name": "ridder",
+        "name": "Риддер"
+      },
+      {
+        "short_name": "samarskoe",
+        "name": "Самарское"
+      },
+      {
+        "short_name": "semei",
+        "name": "Семей"
+      },
+      {
+        "short_name": "serebryansk",
+        "name": "Серебрянск"
+      },
+      {
+        "short_name": "tavricheskoe",
+        "name": "Таврическое"
+      },
+      {
+        "short_name": "terekty",
+        "name": "Теректы"
+      },
+      {
+        "short_name": "urdjar",
+        "name": "Урджар"
+      },
+      {
+        "short_name": "ust-kamenogorsk",
+        "name": "Усть-Каменогорск"
+      },
+      {
+        "short_name": "shar",
+        "name": "Шар"
+      },
+      {
+        "short_name": "shemonaixa",
+        "name": "Шемонаиха"
+      },
+      {
+        "short_name": "shulbinsk",
+        "name": "Шульбинск"
+      }
+    ]
+  },
+  {
+    "name": "Жамбылская область",
+    "cities": [
+      { "short_name": "akkol_talasskii_r-n", "name": "Акколь (Таласский р-н)" },
+      { "short_name": "asa", "name": "Аса" },
+      { "short_name": "bauyrjana_momyshuly", "name": "Бауыржана Момышулы" },
+      { "short_name": "buryl", "name": "Бурыл" },
+      { "short_name": "janatas", "name": "Жанатас" },
+      { "short_name": "karatau", "name": "Каратау" },
+      { "short_name": "kordai", "name": "Кордай" },
+      { "short_name": "kulan", "name": "Кулан" },
+      { "short_name": "merke", "name": "Мерке" },
+      { "short_name": "moiynkum", "name": "Мойынкум" },
+      { "short_name": "sarykemer", "name": "Сарыкемер" },
+      { "short_name": "saudakent", "name": "Саудакент" },
+      { "short_name": "taraz", "name": "Тараз" },
+      { "short_name": "tole_bi", "name": "Толе би" },
+      { "short_name": "shu", "name": "Шу" }
+    ]
+  },
+  {
+    "name": "Западно-Казахстанская область",
+    "cities": [
+      { "short_name": "akjaik", "name": "Акжаик" },
+      { "short_name": "aksai", "name": "Аксай" },
+      { "short_name": "darinskoe", "name": "Дарьинское" },
+      { "short_name": "jalpaktal", "name": "Жалпактал" },
+      { "short_name": "jangala", "name": "Жангала" },
+      { "short_name": "janibek", "name": "Жанибек" },
+      { "short_name": "jympity", "name": "Жымпиты" },
+      { "short_name": "kaztalovka", "name": "Казталовка" },
+      { "short_name": "karatobe", "name": "Каратобе" },
+      { "short_name": "peremetnoe", "name": "Переметное" },
+      { "short_name": "saixin", "name": "Сайхин" },
+      { "short_name": "taipak", "name": "Тайпак" },
+      { "short_name": "taskala", "name": "Таскала" },
+      { "short_name": "trekino", "name": "Трекино" },
+      { "short_name": "uralsk", "name": "Уральск" },
+      {
+        "short_name": "fedorovka_terektinskii_r-n",
+        "name": "Федоровка (Теректинский р-н)"
+      },
+      { "short_name": "chapaev", "name": "Чапаев" },
+      { "short_name": "chingirlau", "name": "Чингирлау" }
+    ]
+  },
+  {
+    "name": "Карагандинская область",
+    "cities": [
+      { "short_name": "abai_abaiskii_r-n", "name": "Абай (Абайский р-н)" },
+      { "short_name": "agadyr", "name": "Агадырь" },
+      { "short_name": "aksu-auly", "name": "Аксу-Аюлы" },
+      {
+        "short_name": "aktogai-karagandinskaya-oblast",
+        "name": "Актогай (Актогайский район)"
+      },
+      { "short_name": "atasu", "name": "Атасу" },
+      { "short_name": "balxash", "name": "Балхаш" },
+      { "short_name": "botakara", "name": "Ботакара" },
+      { "short_name": "gabidena_mustafina", "name": "Габидена Мустафина" },
+      { "short_name": "egindybulak", "name": "Егиндыбулак" },
+      { "short_name": "jairem", "name": "Жайрем" },
+      { "short_name": "jaryk", "name": "Жарык" },
+      { "short_name": "jezdy", "name": "Жезды" },
+      { "short_name": "jezkazgan", "name": "Жезказган" },
+      { "short_name": "karaganda", "name": "Караганда" },
+      { "short_name": "karajal", "name": "Каражал" },
+      { "short_name": "karkaralinsk", "name": "Каркаралинск" },
+      { "short_name": "kengir", "name": "Кенгирское" },
+      { "short_name": "kievka", "name": "Киевка" },
+      {
+        "short_name": "molodejnoe_osakarovskii_r-n",
+        "name": "Молодежное (Осакаровский р-н)"
+      },
+      { "short_name": "osakarovka", "name": "Осакаровка" },
+      { "short_name": "priozersk", "name": "Приозерск" },
+      { "short_name": "saran", "name": "Сарань" },
+      { "short_name": "saryshagan", "name": "Сарышаган" },
+      { "short_name": "satpaev", "name": "Сатпаев" },
+      {
+        "short_name": "talap_karagandinskaya_obl",
+        "name": "Талап (Карагандинская обл)"
+      },
+      { "short_name": "temirtau", "name": "Темиртау" },
+      { "short_name": "topar", "name": "Топар" },
+      { "short_name": "ulytau", "name": "Улытау" },
+      { "short_name": "shaxtinsk", "name": "Шахтинск" },
+      { "short_name": "shashubai", "name": "Шашубай" }
+    ]
+  },
+  {
+    "name": "Костанайская область",
+    "cities": [
+      { "short_name": "amangeldy", "name": "Амангельды" },
+      { "short_name": "amankaragaj", "name": "Аманкарагай" },
+      { "short_name": "arkalyk", "name": "Аркалык" },
+      { "short_name": "auliekol", "name": "Аулиеколь" },
+      { "short_name": "borovskoi", "name": "Боровской" },
+      { "short_name": "denisovka", "name": "Денисовка" },
+      { "short_name": "jitikara", "name": "Житикара" },
+      { "short_name": "zarechnoe", "name": "Заречное" },
+      { "short_name": "zatobolsk", "name": "Затобольск" },
+      { "short_name": "kamysty", "name": "Камысты" },
+      {
+        "short_name": "karabalyk_karabalykskii_r-n",
+        "name": "Карабалык (Карабалыкский р-н)"
+      },
+      { "short_name": "karamendy", "name": "Караменды" },
+      { "short_name": "karasu", "name": "Карасу" },
+      { "short_name": "kachar", "name": "Качар" },
+      { "short_name": "kostanai", "name": "Костанай" },
+      { "short_name": "lisakovsk", "name": "Лисаковск" },
+      { "short_name": "nadezhdinka", "name": "Надеждинка" },
+      { "short_name": "oktyabrskoe", "name": "Октябрьское" },
+      { "short_name": "rudnyi", "name": "Рудный" },
+      { "short_name": "sarykol", "name": "Сарыколь" },
+      { "short_name": "taranovskoe", "name": "Тарановское" },
+      { "short_name": "tobyl", "name": "Тобыл" },
+      { "short_name": "torgai", "name": "Торгай" },
+      { "short_name": "ubaganskoe", "name": "Убаганское" },
+      { "short_name": "uzunkol", "name": "Узунколь" },
+      {
+        "short_name": "fedorovka_fedorovskii_r-n",
+        "name": "Федоровка (Федоровский р-н)"
+      }
+    ]
+  },
+  {
+    "name": "Кызылординская область",
+    "cities": [
+      { "short_name": "aiteke_bi", "name": "Айтеке би" },
+      { "short_name": "aralsk", "name": "Аральск" },
+      { "short_name": "baikonyr", "name": "Байконыр" },
+      { "short_name": "jalagash", "name": "Жалагаш" },
+      { "short_name": "janakorgan", "name": "Жанакорган" },
+      { "short_name": "josaly", "name": "Жосалы" },
+      { "short_name": "kazalinsk", "name": "Казалинск" },
+      { "short_name": "kyzylorda", "name": "Кызылорда" },
+      { "short_name": "saksaulskiy", "name": "Саксаульский" },
+      { "short_name": "terenozek", "name": "Теренозек" },
+      { "short_name": "shieli", "name": "Шиели" }
+    ]
+  },
+  {
+    "name": "Мангистауская область",
+    "cities": [
+      { "short_name": "aktau", "name": "Актау" },
+      { "short_name": "akshukur", "name": "Акшукур" },
+      { "short_name": "beineu", "name": "Бейнеу" },
+      { "short_name": "janaozen", "name": "Жанаозен" },
+      { "short_name": "jetybai", "name": "Жетыбай" },
+      { "short_name": "kuryk", "name": "Курык" },
+      { "short_name": "fort-shevchenko", "name": "Форт-Шевченко" },
+      { "short_name": "shayir", "name": "Шайыр" },
+      { "short_name": "shetpe", "name": "Шетпе" }
+    ]
+  },
+  {
+    "name": "Павлодарская область",
+    "cities": [
+      { "short_name": "akku", "name": "Акку" },
+      { "short_name": "aksu", "name": "Аксу" },
+      { "short_name": "aktogai", "name": "Актогай" },
+      { "short_name": "bayanaul", "name": "Баянаул" },
+      { "short_name": "jelezinka", "name": "Железинка" },
+      { "short_name": "irtyshsk", "name": "Иртышск" },
+      { "short_name": "kashyr", "name": "Кашыр" },
+      { "short_name": "koktobe", "name": "Коктобе" },
+      { "short_name": "moiseevka", "name": "Моисеевка" },
+      { "short_name": "pavlodar", "name": "Павлодар" },
+      { "short_name": "uspenka", "name": "Успенка" },
+      { "short_name": "chernojarka", "name": "Черноярка" },
+      { "short_name": "sharbakty", "name": "Шарбакты" },
+      { "short_name": "ekibastuz", "name": "Экибастуз" }
+    ]
+  },
+  {
+    "name": "Северо-Казахстанская область",
+    "cities": [
+      { "short_name": "belogradovka", "name": "Белоградовка" },
+      { "short_name": "bishkul", "name": "Бишкуль" },
+      { "short_name": "bulaevo", "name": "Булаево" },
+      { "short_name": "kishkenekol", "name": "Кишкенеколь" },
+      { "short_name": "mamlutka", "name": "Мамлютка" },
+      { "short_name": "novoishimskii", "name": "Новоишимский" },
+      { "short_name": "petropavlovsk", "name": "Петропавловск" },
+      { "short_name": "presnovka", "name": "Пресновка" },
+      { "short_name": "saumalkol", "name": "Саумалколь" },
+      { "short_name": "sergeevka", "name": "Сергеевка" },
+      { "short_name": "smirnovo", "name": "Смирново" },
+      { "short_name": "taiynsha", "name": "Тайынша" },
+      { "short_name": "talshik", "name": "Талшик" },
+      { "short_name": "timiryazevo", "name": "Тимирязево" },
+      { "short_name": "chistopolie", "name": "Чистополье" },
+      { "short_name": "chkalovo", "name": "Чкалово" },
+      { "short_name": "yavlenka", "name": "Явленка" }
+    ]
+  },
+  {
+    "name": "Туркестанская область",
+    "cities": [
+      { "short_name": "abai_kelesskii_r-n", "name": "Абай (Келесский р-н)" },
+      { "short_name": "aksukent", "name": "Аксукент" },
+      { "short_name": "arys", "name": "Арысь" },
+      { "short_name": "asykata", "name": "Асыката" },
+      { "short_name": "atakent", "name": "Атакент" },
+      { "short_name": "jetysai", "name": "Жетысай" },
+      { "short_name": "kazygurt", "name": "Казыгурт" },
+      { "short_name": "karabulak", "name": "Карабулак" },
+      { "short_name": "kentau", "name": "Кентау" },
+      { "short_name": "lenger", "name": "Ленгер" },
+      { "short_name": "saryagash", "name": "Сарыагаш" },
+      { "short_name": "temirlanovka", "name": "Темирлановка" },
+      { "short_name": "turara_ryskulova", "name": "Турара Рыскулова" },
+      { "short_name": "turkestan", "name": "Туркестан" },
+      { "short_name": "shardara", "name": "Шардара" },
+      { "short_name": "shaulder", "name": "Шаульдер" },
+      { "short_name": "shayan", "name": "Шаян" },
+      { "short_name": "sholakkorgan", "name": "Шолаккорган" },
+      { "short_name": "shymkent", "name": "Шымкент" }
+    ]
+  }
 ]
