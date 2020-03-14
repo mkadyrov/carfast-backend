@@ -143,6 +143,14 @@ $router->get('/api/news', function () use ($router) {
     $news = News::take(3)->get();
     return $news;
 });
+// Get News (MongoDB)
+$router->get('/', function () use ($router) {
+    try {
+        $news = News::take(3)->get();
+    } catch (\Exception $e) {
+        dd($e);
+    }
+});
 
 // Get Stocks (MongoDB)
 $router->get('/api/stocks', function () use ($router) {
