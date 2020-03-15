@@ -147,7 +147,10 @@ $router->get('/api/filter', function (Request $request) use ($router) {
             if ($needsPremium) $counter++;
         }
         if ($tarif === 2) {
-            if ($filter->condition !== '' || $filter->gearbox !== '' || $filter->isCleared !== null) {
+            if ($filter->condition !== '' || $filter->isCleared !== null) {
+                $needsPremium = true;
+            }
+            if ($filter->gearbox === "Механика" || $filter->gearbox === "Автомат" ) {
                 $needsPremium = true;
             }
         }
