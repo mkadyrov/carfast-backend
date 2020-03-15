@@ -115,8 +115,9 @@ $router->get('/api/filter', function (Request $request) use ($router) {
         if ($find_user->tariff == "professionalplus") {
             $tarif = 3;
         }
-    } else {
-        $tarif = -1;
+        if ($find_user->tariff ===null) {
+            $tarif = -1;
+        }
     }
     $needsPremium = false;
     foreach ($filters as $filter) {
