@@ -170,7 +170,7 @@ $router->get('/', function () use ($router) {
 
 // Get tarif (MongoDB)
 $router->get('/api/tarif', function (Request $request) use ($router) {
-    $user = User::where("chat_id", "01".$request->user_id)->first();
+    $user = User::where("chat_id",$request->user_id)->first();
     return json_encode(["rate"=>$user->tariff]);
 });
 
