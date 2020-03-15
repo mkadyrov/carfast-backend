@@ -202,6 +202,15 @@ $router->get('/api/tarif', function (Request $request) use ($router) {
     return json_encode(["rate" => $user->tariff]);
 });
 
+$router->get('/api/tarif/cancel', function (Request $request) use ($router) {
+
+        $client = new GuzzleHttp\Client();
+        $user = User::where("chat_id", $request->user_id)->first();
+        $res = $client->put('http://167.99.218.57:8000/payment/cancel/' . $request->user_id, []);
+        return true;
+
+});
+
 // Get Stocks (MongoDB)
 $router->get('/api/stocks', function () use ($router) {
     $stocks = Stocks::all();
