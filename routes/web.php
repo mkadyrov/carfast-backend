@@ -43,7 +43,7 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
                     'yearStart' => $json['yearStart'],
                     'yearEnd' => $json['yearEnd'],
                     'gearbox' => $json['gearbox'],
-                    'telegram_user_id' => $json['user'],
+                    'telegram_user_id' => "01".$json['user'],
                     'condition' => $json['condition'],
                     'isCleared' => ['type' => $json['isCleared']],
                     'needsPremium' => true,
@@ -63,7 +63,7 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
                     'yearStart' => $json['yearStart'],
                     'yearEnd' => $json['yearEnd'],
                     'gearbox' => $json['gearbox'],
-                    'telegram_user_id' => $json['user'],
+                    'telegram_user_id' => "01".$json['user'],
                     'condition' => $json['condition'],
                     'isCleared' => ['type' => $json['isCleared']],
                     'needsPremium' => true,
@@ -73,7 +73,7 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
         }
         if (!empty($filter->_id)) {
             $client = new GuzzleHttp\Client();
-            $res = $client->post('167.99.218.57:3003/api/filter/new/' . $json['user'], [
+            $res = $client->post('http://167.99.218.57:3003/api/filter/new/' . "01".$json['user'], [
                 'json' => $filter
             ]);
         }
@@ -92,12 +92,12 @@ $router->post('/api/delete', function (Request $request) use ($router) {
 
 // Get Filters (MongoDB)
 $router->get('/api/filter', function (Request $request) use ($router) {
-    $filters = Filter::where("telegram_user_id", $request->get("telegram_user_id"))->orderBy('created_at', 'desc')->get();
+    $filters = Filter::where("telegram_user_id", "01".$request->get("telegram_user_id"))->orderBy('created_at', 'desc')->get();
     $counter = 0;
     $tarif = 0;
 //    $user = new User();
 //    $user->setConnection('mongodbBot');
-    $find_user = User::where("chat_id", $request->get("telegram_user_id"))->get();
+    $find_user = User::where("chat_id", "01".$request->get("telegram_user_id"))->get();
     if (!empty($find_user->tariff)) {
         if ($find_user->tariff == "standard") {
             $tarif = 1;
@@ -169,7 +169,7 @@ $router->get('/', function () use ($router) {
 
 // Get tarif (MongoDB)
 $router->get('/api/tarif', function (Request $request) use ($router) {
-    $user = User::where("chat_id", $request->user_id)->get();
+    $user = User::where("chat_id", "01".$request->user_id)->get();
     return json_encode(["rate"=>$user->tariff]);
 });
 
