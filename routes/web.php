@@ -132,7 +132,7 @@ $router->get('/api/filter', function (Request $request) use ($router) {
                 $needsPremium = true;
             }
             if(strlen($filter->gearbox) > 0 ){
-//                $needsPremium = true;
+                $needsPremium = true;
             }
             if (strlen($filter->condition) > 0|| $filter->isCleared === true || $filter->isCleared === false) {
                 $needsPremium = true;
