@@ -131,7 +131,7 @@ $router->get('/api/filter', function (Request $request) use ($router) {
             if ($filter->region === '' || $filter->brand === '' || $filter->model === '') {
                 $needsPremium = true;
             }
-            if ($filter->condition !== '' || $filter->gearbox !== '' || $filter->isCleared !== null) {
+            if ($filter->condition !== '' || $filter->gearbox !== '' || !!$filter->isCleared) {
                 $needsPremium = true;
             }
             if ($filter->region === '' && $filter->brand === '' && $filter->model === null) {
