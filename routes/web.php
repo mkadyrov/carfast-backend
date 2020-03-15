@@ -119,8 +119,9 @@ $router->get('/api/filter', function (Request $request) use ($router) {
             $tarif = -1;
         }
     }
-    $needsPremium = false;
+
     foreach ($filters as $filter) {
+        $needsPremium = false;
         if ($tarif == 0) {
             $needsPremium = false;
         }
