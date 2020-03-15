@@ -140,6 +140,7 @@ $router->get('/api/filter', function (Request $request) use ($router) {
             if ($filter->percent < 0) {
                 $needsPremium = true;
             }
+            if($needsPremium)  $counter++;
         }
         if ($tarif === 2) {
             if ($filter->condition !== '' || $filter->gearbox !== '' || $filter->isCleared !== null) {
@@ -160,7 +161,7 @@ $router->get('/api/filter', function (Request $request) use ($router) {
         }
         $filter->needsPremium = $needsPremium;
         $filter->save();
-        $counter++;
+
     }
     return $filters;
 });
