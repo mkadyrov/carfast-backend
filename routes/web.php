@@ -115,7 +115,7 @@ $router->get('/api/filter', function (Request $request) use ($router) {
         if ($find_user->tariff == "professionalplus") {
             $tarif = 3;
         }
-        if ($find_user->tariff ===null) {
+        if ($find_user->tariff === null) {
             $tarif = -1;
         }
     }
@@ -131,16 +131,16 @@ $router->get('/api/filter', function (Request $request) use ($router) {
             if ($filter->region === '' || $filter->brand === '' || $filter->model === '') {
                 $needsPremium = true;
             }
-//            if ($filter->condition !== '' || $filter->gearbox !== '' || !!$filter->isCleared) {
-//                $needsPremium = true;
-//            }
+            if (strlen($filter->condition) > 0 || strlen($filter->gearbox) > 0 || $filter->isCleared === true || $filter->isCleared === false) {
+                $needsPremium = true;
+            }
             if ($filter->region === '' && $filter->brand === '' && $filter->model === null) {
                 $needsPremium = true;
             }
             if ($filter->percent < 0) {
                 $needsPremium = true;
             }
-            if($needsPremium)  $counter++;
+            if ($needsPremium) $counter++;
         }
         if ($tarif === 2) {
             if ($filter->condition !== '' || $filter->gearbox !== '' || $filter->isCleared !== null) {
