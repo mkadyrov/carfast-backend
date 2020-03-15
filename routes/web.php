@@ -150,7 +150,7 @@ $router->get('/api/filter', function (Request $request) use ($router) {
             $needsPremium = false;
         }
         if ($tarif === -1) {
-            $needsPremium = false;
+            $needsPremium = true;
         }
         if (!$needsPremium) {
             $filter->isActive = true;
