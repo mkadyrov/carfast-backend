@@ -74,6 +74,7 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
         if (!empty($filter->_id)) {
             $client = new GuzzleHttp\Client();
             $user = User::where("chat_id",$json['user'])->get();
+            return $user;
             $res = $client->post('http://167.99.218.57:3003/api/filter/new/' .$user->_id, [
                 'json' => $filter
             ]);
