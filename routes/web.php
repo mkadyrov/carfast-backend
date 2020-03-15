@@ -43,9 +43,10 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
                     'yearStart' => $json['yearStart'],
                     'yearEnd' => $json['yearEnd'],
                     'gearbox' => $json['gearbox'],
-                    'telegram_user_id' => "01".$json['user'],
+                    'percent' => $json['percent'],
+                    'telegram_user_id' => $json['user'],
                     'condition' => $json['condition'],
-                    'isCleared' => ['type' => $json['isCleared']],
+                    'isCleared' => $json['isCleared'],
                     'needsPremium' => true,
                 ]);
         } else {
@@ -63,9 +64,10 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
                     'yearStart' => $json['yearStart'],
                     'yearEnd' => $json['yearEnd'],
                     'gearbox' => $json['gearbox'],
-                    'telegram_user_id' => "01".$json['user'],
+                    'telegram_user_id' => $json['user'],
                     'condition' => $json['condition'],
-                    'isCleared' => ['type' => $json['isCleared']],
+                    'percent' => $json['percent'],
+                    'isCleared' => $json['isCleared'],
                     'needsPremium' => true,
                 ]);
             $filter = Filter::findOrFail($json["_id"]);
@@ -73,8 +75,8 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
         }
         if (!empty($filter->_id)) {
             $client = new GuzzleHttp\Client();
-            $user = User::where("chat_id",$json['user'])->first();
-            $res = $client->post('http://167.99.218.57:3003/api/filter/new/'.$json['user'], [
+            $user = User::where("chat_id", $json['user'])->first();
+            $res = $client->post('http://167.99.218.57:8000/api/filter/new/' . $json['user'], [
                 'json' => $filter
             ]);
         }
@@ -93,27 +95,30 @@ $router->post('/api/delete', function (Request $request) use ($router) {
 
 // Get Filters (MongoDB)
 $router->get('/api/filter', function (Request $request) use ($router) {
-    $filters = Filter::where("telegram_user_id", "01".$request->get("telegram_user_id"))->orderBy('created_at', 'desc')->get();
+    $filters = Filter::where("telegram_user_id", $request->get("telegram_user_id"))->orderBy('created_at', 'desc')->get();
     $counter = 0;
     $tarif = 0;
 //    $user = new User();
 //    $user->setConnection('mongodbBot');
-    $find_user = User::where("chat_id",$request->get("telegram_user_id"))->first();
+    $find_user = User::where("chat_id", $request->get("telegram_user_id"))->first();
     if (!empty($find_user->tariff)) {
+        if ($find_user->tariff == "trial") {
+            $tarif = 0;
+        }
         if ($find_user->tariff == "standard") {
             $tarif = 1;
         }
         if ($find_user->tariff == "professional") {
             $tarif = 2;
         }
-        if ($find_user->tariff == "professional") {
+        if ($find_user->tariff == "professionalplus") {
             $tarif = 3;
         }
     }
     $needsPremium = false;
     foreach ($filters as $filter) {
         if ($tarif == 0) {
-            $needsPremium = true;
+            $needsPremium = false;
         }
         if ($tarif === 1) {
             if ($counter > 2) {
@@ -128,11 +133,17 @@ $router->get('/api/filter', function (Request $request) use ($router) {
             if ($filter->region === '' && $filter->brand === '' && $filter->model === null) {
                 $needsPremium = true;
             }
+            if ($filter->percent < 0) {
+                $needsPremium = true;
+            }
         }
         if ($tarif === 2) {
             if ($filter->condition !== '' || $filter->gearbox !== '' || $filter->isCleared !== null) {
                 $needsPremium = true;
             }
+        }
+        if ($tarif === 3) {
+            $needsPremium = false;
         }
         if (!$needsPremium) {
             $filter->isActive = true;
@@ -155,10 +166,9 @@ $router->get('/api/user/{token}', function ($token = null) use ($router) {
 
 // Get News (MongoDB)
 $router->get('/api/news', function (Request $request) use ($router) {
-    if($request->id){
+    if ($request->id) {
         $news = News::find($request->id);
-    }
-    else{
+    } else {
         $news = News::take(3)->get();
     }
 
@@ -170,8 +180,8 @@ $router->get('/', function () use ($router) {
 
 // Get tarif (MongoDB)
 $router->get('/api/tarif', function (Request $request) use ($router) {
-    $user = User::where("chat_id",$request->user_id)->first();
-    return json_encode(["rate"=>$user->tariff]);
+    $user = User::where("chat_id", $request->user_id)->first();
+    return json_encode(["rate" => $user->tariff]);
 });
 
 // Get Stocks (MongoDB)
