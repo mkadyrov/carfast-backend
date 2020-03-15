@@ -128,12 +128,12 @@ $router->get('/api/filter', function (Request $request) use ($router) {
             if ($counter > 2) {
                 $needsPremium = true;
             }
-            if ($filter->region === '' || $filter->brand === '' || $filter->model === '') {
-                $needsPremium = true;
-            }
-            if ($filter->condition !== '' || $filter->gearbox !== '' || !!$filter->isCleared) {
-                $needsPremium = true;
-            }
+//            if ($filter->region === '' || $filter->brand === '' || $filter->model === '') {
+//                $needsPremium = true;
+//            }
+//            if ($filter->condition !== '' || $filter->gearbox !== '' || !!$filter->isCleared) {
+//                $needsPremium = true;
+//            }
             if ($filter->region === '' && $filter->brand === '' && $filter->model === null) {
                 $needsPremium = true;
             }
