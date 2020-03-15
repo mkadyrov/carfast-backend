@@ -229,7 +229,7 @@ $router->get('/api/regions', function () use ($router) {
         foreach ($item['cities'] as $cityes) {
             $city = [];
             $city['name'] = $cityes['name'];
-            $city['city'] = isset($cityes['city']) ? $cityes['city'] : $cityes['name'];
+            $city['city'] = isset($cityes['short_name']) ? $cityes['short_name'] : $cityes['name'];
             if (!array_key_exists('popular', $cityes)) {
                 $city['popular'] = false;
             } else {
