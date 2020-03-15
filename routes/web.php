@@ -132,7 +132,7 @@ $router->get('/api/filter', function (Request $request) use ($router) {
             if ($filter->region === '' || $filter->brand === '' || $filter->model === '') {
                 $needsPremium = true;
             }
-            if ($filter->gearbox === "Механика" || $filter->gearbox === "Автомат" ) {
+            if ($filter->gearbox === "Механика" || $filter->gearbox === "Автомат") {
                 $needsPremium = true;
             }
             if (strlen($filter->condition) > 0 || $filter->isCleared === true || $filter->isCleared === false) {
@@ -150,7 +150,7 @@ $router->get('/api/filter', function (Request $request) use ($router) {
             if ($filter->condition !== '' || $filter->isCleared !== null) {
                 $needsPremium = true;
             }
-            if ($filter->gearbox === "Механика" || $filter->gearbox === "Автомат" ) {
+            if ($filter->gearbox === "Механика" || $filter->gearbox === "Автомат") {
                 $needsPremium = true;
             }
         }
@@ -199,15 +199,15 @@ $router->get('/', function () use ($router) {
 // Get tarif (MongoDB)
 $router->get('/api/tarif', function (Request $request) use ($router) {
     $user = User::where("chat_id", $request->user_id)->first();
-    return json_encode(["rate" => $user->tariff]);
+    return json_encode(["rate" => $user->tariff, "has_subscription" => $user->subscription_id]);
 });
 
 $router->get('/api/tarif/cancel', function (Request $request) use ($router) {
 
-        $client = new GuzzleHttp\Client();
-        $user = User::where("chat_id", $request->user_id)->first();
-        $res = $client->put('http://167.99.218.57:8000/payment/cancel/' . $request->user_id, []);
-        return true;
+    $client = new GuzzleHttp\Client();
+    $user = User::where("chat_id", $request->user_id)->first();
+    $res = $client->put('http://167.99.218.57:8000/payment/cancel/' . $request->user_id, []);
+    return true;
 
 });
 
