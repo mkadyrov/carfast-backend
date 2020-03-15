@@ -36,7 +36,7 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
                     'brand' => $json['brand'],
                     'model' => $json['model'],
                     'priceStart' => $json['priceStart'],
-                    'priceEnd' => $json['priceEnd'] > 0 ? $json['priceEnd']:"999999999",
+                    'priceEnd' => $json['priceEnd'] > 0 ? $json['priceEnd'] : "999999999",
                     'region' => $json['region'],
                     'city' => $json['city'],
                     'city_name' => $json['city_name'],
@@ -64,7 +64,7 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
                     'brand' => $json['brand'],
                     'model' => $json['model'],
                     'priceStart' => $json['priceStart'],
-                    'priceEnd' => $json['priceEnd'] > 0 ? $json['priceEnd']:"999999999",
+                    'priceEnd' => $json['priceEnd'] > 0 ? $json['priceEnd'] : "999999999",
                     'region' => $json['region'],
                     'city' => $json['city'],
                     'city_name' => $json['city_name'],
@@ -115,6 +115,8 @@ $router->get('/api/filter', function (Request $request) use ($router) {
         if ($find_user->tariff == "professionalplus") {
             $tarif = 3;
         }
+    } else {
+        $tarif = -1;
     }
     $needsPremium = false;
     foreach ($filters as $filter) {
@@ -144,6 +146,9 @@ $router->get('/api/filter', function (Request $request) use ($router) {
             }
         }
         if ($tarif === 3) {
+            $needsPremium = false;
+        }
+        if ($tarif === -1) {
             $needsPremium = false;
         }
         if (!$needsPremium) {
