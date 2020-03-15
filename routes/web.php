@@ -73,7 +73,8 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
         }
         if (!empty($filter->_id)) {
             $client = new GuzzleHttp\Client();
-            $res = $client->post('http://167.99.218.57:3003/api/filter/new/' . "01".$json['user'], [
+            $user = User::where("chat_id", "01".$request->get("telegram_user_id"))->get();
+            $res = $client->post('http://167.99.218.57:3003/api/filter/new/' .$user->_id, [
                 'json' => $filter
             ]);
         }
