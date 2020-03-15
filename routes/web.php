@@ -98,7 +98,7 @@ $router->post('/api/delete', function (Request $request) use ($router) {
 $router->get('/api/filter', function (Request $request) use ($router) {
     $filters = Filter::where("telegram_user_id", $request->get("telegram_user_id"))->orderBy('created_at', 'desc')->get();
     $counter = 0;
-    $tarif = 0;
+    $tarif = -1;
 //    $user = new User();
 //    $user->setConnection('mongodbBot');
     $find_user = User::where("chat_id", $request->get("telegram_user_id"))->first();
