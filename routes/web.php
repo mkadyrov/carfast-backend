@@ -36,7 +36,7 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
                     'brand' => $json['brand'],
                     'model' => $json['model'],
                     'priceStart' => $json['priceStart'],
-                    'priceEnd' => $json['priceEnd'],
+                    'priceEnd' => $json['priceEnd'] > 0 ? $json['priceEnd']:"999 999 999",
                     'region' => $json['region'],
                     'city' => $json['city'],
                     'city_name' => $json['city_name'],
@@ -49,6 +49,13 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
                     'isCleared' => $json['isCleared'],
                     'needsPremium' => true,
                 ]);
+            if (!empty($filter->_id)) {
+                $client = new GuzzleHttp\Client();
+                $user = User::where("chat_id", $json['user'])->first();
+                $res = $client->post('http://167.99.218.57:8000/api/filter/new/' . $json['user'], [
+                    'json' => $filter
+                ]);
+            }
         } else {
             Filter::find($json["_id"])->update(
                 [
@@ -57,7 +64,7 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
                     'brand' => $json['brand'],
                     'model' => $json['model'],
                     'priceStart' => $json['priceStart'],
-                    'priceEnd' => $json['priceEnd'],
+                    'priceEnd' => $json['priceEnd'] > 0 ? $json['priceEnd']:"999 999 999",
                     'region' => $json['region'],
                     'city' => $json['city'],
                     'city_name' => $json['city_name'],
@@ -73,13 +80,7 @@ $router->post('/api/filter/save', function (Request $request) use ($router) {
             $filter = Filter::findOrFail($json["_id"]);
 
         }
-        if (!empty($filter->_id)) {
-            $client = new GuzzleHttp\Client();
-            $user = User::where("chat_id", $json['user'])->first();
-            $res = $client->post('http://167.99.218.57:8000/api/filter/new/' . $json['user'], [
-                'json' => $filter
-            ]);
-        }
+
     }
     return $json;
 });
