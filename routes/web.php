@@ -132,7 +132,7 @@ $router->get('/api/filter', function (Request $request) use ($router) {
             if ($filter->region === '' || $filter->brand === '' || $filter->model === '') {
                 $needsPremium = true;
             }
-            if ($filter->gearbox === "Механика" || $filter->gearbox === "Автомат") {
+            if ($filter->gearbox === "Механика" || $filter->gearbox === "АКПП") {
                 $needsPremium = true;
             }
             if (strlen($filter->condition) > 0 || $filter->isCleared === true || $filter->isCleared === false) {
@@ -150,7 +150,7 @@ $router->get('/api/filter', function (Request $request) use ($router) {
             if ($filter->condition !== '' || $filter->isCleared !== null) {
                 $needsPremium = true;
             }
-            if ($filter->gearbox === "Механика" || $filter->gearbox === "Автомат") {
+            if ($filter->gearbox === "Механика" || $filter->gearbox === "АКПП") {
                 $needsPremium = true;
             }
         }
