@@ -153,6 +153,9 @@ $router->get('/api/filter', function (Request $request) use ($router) {
             if ($filter->gearbox === "Механика" || $filter->gearbox === "АКПП") {
                 $needsPremium = true;
             }
+            if ($filter->region === '' || $filter->city_name === "") {
+                $needsPremium = true;
+            }
         }
         if ($tarif === 3) {
             $needsPremium = false;
